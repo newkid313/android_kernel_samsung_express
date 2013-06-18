@@ -1,0 +1,73 @@
+Build SEC FEATURE Header
+
+SECFUNC_BUILD_KERNEL(all, )
+build project=express_rev03, config=
+`/home/ym48.kim/workspace/qualcomm_ics/SGH-I437_NA_ATT_Kernel/arch/arm/configs/express_rev03_defconfig' -> `/home/ym48.kim/workspace/qualcomm_ics/SGH-I437_NA_ATT_Kernel/.config'
+make: Entering directory `/home/ym48.kim/workspace/qualcomm_ics/SGH-I437_NA_ATT_Kernel'
+scripts/kconfig/conf --oldnoconfig Kconfig
+drivers/battery/Kconfig:126:warning: type of 'CHARGER_SMB347' redefined from 'boolean' to 'tristate'
+drivers/misc/inv_mpu/Kconfig:58:warning: choice value used outside its choice group
+drivers/misc/inv_mpu/Kconfig:62:warning: choice value used outside its choice group
+drivers/media/video/msm_zsl/Kconfig:117:warning: choice value used outside its choice group
+drivers/media/video/msm_zsl/Kconfig:122:warning: choice value used outside its choice group
+#
+# configuration written to .config
+#
+make: Leaving directory `/home/ym48.kim/workspace/qualcomm_ics/SGH-I437_NA_ATT_Kernel'
+make: Entering directory `/home/ym48.kim/workspace/qualcomm_ics/SGH-I437_NA_ATT_Kernel'
+scripts/kconfig/conf --silentoldconfig Kconfig
+drivers/battery/Kconfig:126:warning: type of 'CHARGER_SMB347' redefined from 'boolean' to 'tristate'
+drivers/misc/inv_mpu/Kconfig:58:warning: choice value used outside its choice group
+drivers/misc/inv_mpu/Kconfig:62:warning: choice value used outside its choice group
+drivers/media/video/msm_zsl/Kconfig:117:warning: choice value used outside its choice group
+drivers/media/video/msm_zsl/Kconfig:122:warning: choice value used outside its choice group
+make: Leaving directory `/home/ym48.kim/workspace/qualcomm_ics/SGH-I437_NA_ATT_Kernel'
+make: Entering directory `/home/ym48.kim/workspace/qualcomm_ics/SGH-I437_NA_ATT_Kernel'
+  CHK     include/linux/version.h
+  CHK     include/generated/utsrelease.h
+make[1]: `include/generated/mach-types.h' is up to date.
+  CALL    scripts/checksyscalls.sh
+  CHK     include/generated/compile.h
+  GZIP    kernel/config_data.gz
+  CC      drivers/input/touchscreen/mxt224s.o
+  CHK     kernel/config_data.h
+drivers/input/touchscreen/mxt224s.c:157: warning: useless storage class specifier in empty declaration
+drivers/input/touchscreen/mxt224s.c:167: warning: useless storage class specifier in empty declaration
+drivers/input/touchscreen/mxt224s.c:172: warning: useless storage class specifier in empty declaration
+drivers/input/touchscreen/mxt224s.c: In function 'mxt_ta_probe':
+drivers/input/touchscreen/mxt224s.c:1046: warning: unused variable 'data'
+drivers/input/touchscreen/mxt224s.c: At top level:
+drivers/input/touchscreen/mxt224s.c:2535: warning: 'mxt_load_fw_bootmode' defined but not used
+drivers/input/touchscreen/mxt224s.c: In function 'mxt_probe':
+drivers/input/touchscreen/mxt224s.c:3706: warning: 'tsp_config' may be used uninitialized in this function
+  LD      drivers/input/touchscreen/built-in.o
+  LD      drivers/input/built-in.o
+  LD      drivers/built-in.o
+  LD      vmlinux.o
+  MODPOST vmlinux.o
+  GEN     .version
+  CHK     include/generated/compile.h
+  UPD     include/generated/compile.h
+  CC      init/version.o
+  LD      init/built-in.o
+  LD      .tmp_vmlinux1
+  KSYM    .tmp_kallsyms1.S
+  AS      .tmp_kallsyms1.o
+  LD      .tmp_vmlinux2
+  KSYM    .tmp_kallsyms2.S
+  AS      .tmp_kallsyms2.o
+  LD      vmlinux
+  SYSMAP  System.map
+  SYSMAP  .tmp_System.map
+  Building modules, stage 2.
+  OBJCOPY arch/arm/boot/Image
+  MODPOST 12 modules
+  Kernel: arch/arm/boot/Image is ready
+  LZO     arch/arm/boot/compressed/piggy.lzo
+  AS      arch/arm/boot/compressed/piggy.lzo.o
+  LD      arch/arm/boot/compressed/vmlinux
+  OBJCOPY arch/arm/boot/zImage
+  Kernel: arch/arm/boot/zImage is ready
+make: Leaving directory `/home/ym48.kim/workspace/qualcomm_ics/SGH-I437_NA_ATT_Kernel'
+boot.img
+Total compile time is 76 seconds
